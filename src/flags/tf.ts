@@ -1,0 +1,7 @@
+import { createFlagComponent } from '../createFlag.js';
+
+const __inner = "<g clip-path=\"url(#a)\"><path fill=\"#fff\" d=\"M0 0h32v24H0z\"/><path fill=\"#2e42a5\" fill-rule=\"evenodd\" d=\"M0 0v24h32V0z\" clip-rule=\"evenodd\"/><mask id=\"b\" width=\"32\" height=\"24\" x=\"0\" y=\"0\" maskUnits=\"userSpaceOnUse\" style=\"mask-type:luminance\"><path fill=\"#fff\" fill-rule=\"evenodd\" d=\"M0 0v24h32V0z\" clip-rule=\"evenodd\"/></mask><g fill-rule=\"evenodd\" clip-rule=\"evenodd\" mask=\"url(#b)\"><path fill=\"#f7fcff\" d=\"M18.79 6.2h8.04l-.78 1.5h-2.44v.81h1.87l-.76 1.4h-1.1v2.8l1.82-2.88 2.36 4.1h-.96l-.34-.45h-2.14l-1.5 2.78v.15l-.05-.08-.04.08v-.15l-1.5-2.78h-2.14l-.34.44h-.97l2.37-4.09L22 12.71v-5h-2.44zm6.7 5.3-.53.82h1zm-5.35 0 .53.82h-1zm-3.83-.89.83-.6.84.6-.3-1.02.8-.65-1-.02-.34-1.02-.33 1.02-1.01.02.8.65zm12.15-.6-.84.6.3-1.02-.8-.65 1-.02.34-1.02.33 1.02 1.01.02-.8.65.29 1.02zm-3.38 7.8.83-.62.83.61-.3-1.02.82-.65-1.02-.02-.33-1.02-.33 1.02-1.01.02.8.65zm-5.39-.62-.83.61.3-1.02-.82-.65 1.02-.02.33-1.02.33 1.02 1.01.02-.8.65.3 1.02zm2.28 3.01.83-.61.83.61-.3-1.03.81-.64-1-.03-.34-1.01-.33 1.01-1.01.03.8.64z\"/><path fill=\"#f50100\" d=\"M8 0h4v10H8z\"/><path fill=\"#2e42a5\" d=\"M0 0h4v10H0z\"/><path fill=\"#f7fcff\" d=\"M4 0h4v10H4z\"/></g></g><defs><clipPath id=\"a\"><path fill=\"#fff\" d=\"M0 0h32v24H0z\"/></clipPath></defs>";
+
+const C = createFlagComponent('tf', 'French Southern Territories', __inner);
+
+export default C;

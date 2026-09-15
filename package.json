@@ -1,0 +1,68 @@
+{
+  "name": "matter-flags",
+  "version": "0.1.0",
+  "description": "Tree-shakeable, zero-dependency React flag components. One flag = ~1kB.",
+  "type": "module",
+  "sideEffects": false,
+  "license": "MIT",
+  "homepage": "https://github.com/mbdev3/matter-flags",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbdev3/matter-flags.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mbdev3/matter-flags/issues"
+  },
+  "keywords": [
+    "react",
+    "flags",
+    "countries",
+    "svg",
+    "tree-shakeable",
+    "zero-dependency"
+  ],
+  "files": [
+    "dist",
+    "NOTICE",
+    "README.md"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./flags": {
+      "types": "./dist/flags/index.d.ts",
+      "import": "./dist/flags/index.js"
+    },
+    "./flags/*": {
+      "types": "./dist/flags/*.d.ts",
+      "import": "./dist/flags/*.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build:flags": "node scripts/build-flags.mjs && node scripts/build-readme.mjs",
+    "build": "pnpm build:flags && tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "size": "node scripts/check-size.mjs",
+    "prepublishOnly": "pnpm build"
+  },
+  "peerDependencies": {
+    "react": "^18 || ^19"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "@types/react": "^18.3.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "svgo": "^4.1.0",
+    "tsup": "^8.0.2",
+    "typescript": "^5.5.4"
+  },
+  "packageManager": "pnpm@9.0.0"
+}

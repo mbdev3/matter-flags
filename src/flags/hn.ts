@@ -1,0 +1,7 @@
+import { createFlagComponent } from '../createFlag.js';
+
+const __inner = "<g clip-path=\"url(#a)\"><path fill=\"#fff\" d=\"M0 0h32v24H0z\"/><path fill=\"#f7fcff\" fill-rule=\"evenodd\" d=\"M0 0v24h32V0z\" clip-rule=\"evenodd\"/><mask id=\"b\" width=\"32\" height=\"24\" x=\"0\" y=\"0\" maskUnits=\"userSpaceOnUse\" style=\"mask-type:luminance\"><path fill=\"#fff\" fill-rule=\"evenodd\" d=\"M0 0v24h32V0z\" clip-rule=\"evenodd\"/></mask><g fill=\"#00bce4\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" mask=\"url(#b)\"><path d=\"M0 0v8h32V0zm0 16v8h32v-8zm16.4-3.33-.86.45.16-.95-.7-.74h.97l.43-.93.44.93h.96l-.7.74.17.95zm-6.08-2.17-.87.45.17-.95-.7-.74h.96l.44-.93.43.93h.97l-.7.74.16.95zm0 4.2-.87.45.17-.95-.7-.74h.96l.44-.93.43.93h.97l-.7.74.16.95zm12-4.2-.87.45.17-.95-.7-.74h.96l.44-.93.43.93h.97l-.7.74.16.95zm0 4.2-.87.45.17-.95-.7-.74h.96l.44-.93.43.93h.97l-.7.74.16.95z\"/></g></g><defs><clipPath id=\"a\"><path fill=\"#fff\" d=\"M0 0h32v24H0z\"/></clipPath></defs>";
+
+const C = createFlagComponent('hn', 'Honduras', __inner);
+
+export default C;

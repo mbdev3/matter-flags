@@ -1,0 +1,9 @@
+matter-flags flag artwork sources:
+
+1. Country flags (assets/countries/, assets/countryCodeList.json)
+   Derived from Yummygum flagpack-core (MIT License).
+   Copyright (c) Yummygum. See https://github.com/Yummygum/flagpack-core/blob/main/LICENSE
+
+2. Organization & US state flags (assets/orgs/, assets/states/)
+   Wikimedia Commons, all files verified Public Domain at time of import.
+   Per-file provenance: assets/orgs/SOURCES.json, assets/states/SOURCES.json.

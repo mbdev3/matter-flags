@@ -1,0 +1,255 @@
+{
+  "note": "US state flags + DC (50 files). All verified Public Domain via Wikimedia Commons API. Mississippi excluded: licensed Copyrighted free use (not PD).",
+  "flags": {
+    "us-al": {
+      "name": "Alabama",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Alabama.svg",
+      "license": "Public domain"
+    },
+    "us-ak": {
+      "name": "Alaska",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Alaska.svg",
+      "license": "Public domain"
+    },
+    "us-az": {
+      "name": "Arizona",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Arizona.svg",
+      "license": "Public domain"
+    },
+    "us-ar": {
+      "name": "Arkansas",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Arkansas.svg",
+      "license": "Public domain"
+    },
+    "us-ca": {
+      "name": "California",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_California.svg",
+      "license": "Public domain"
+    },
+    "us-co": {
+      "name": "Colorado",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Colorado.svg",
+      "license": "Public domain"
+    },
+    "us-ct": {
+      "name": "Connecticut",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Connecticut.svg",
+      "license": "Public domain"
+    },
+    "us-de": {
+      "name": "Delaware",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Delaware.svg",
+      "license": "Public domain"
+    },
+    "us-fl": {
+      "name": "Florida",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Florida.svg",
+      "license": "Public domain"
+    },
+    "us-ga": {
+      "name": "Georgia",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Georgia.svg",
+      "license": "Public domain"
+    },
+    "us-hi": {
+      "name": "Hawaii",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Hawaii.svg",
+      "license": "Public domain"
+    },
+    "us-id": {
+      "name": "Idaho",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Idaho.svg",
+      "license": "Public domain"
+    },
+    "us-il": {
+      "name": "Illinois",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Illinois.svg",
+      "license": "Public domain"
+    },
+    "us-in": {
+      "name": "Indiana",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Indiana.svg",
+      "license": "Public domain"
+    },
+    "us-ia": {
+      "name": "Iowa",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Iowa.svg",
+      "license": "Public domain"
+    },
+    "us-ks": {
+      "name": "Kansas",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Kansas.svg",
+      "license": "Public domain"
+    },
+    "us-ky": {
+      "name": "Kentucky",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Kentucky.svg",
+      "license": "Public domain"
+    },
+    "us-la": {
+      "name": "Louisiana",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Louisiana.svg",
+      "license": "Public domain"
+    },
+    "us-me": {
+      "name": "Maine",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Maine.svg",
+      "license": "Public domain"
+    },
+    "us-md": {
+      "name": "Maryland",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Maryland.svg",
+      "license": "Public domain"
+    },
+    "us-ma": {
+      "name": "Massachusetts",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Massachusetts.svg",
+      "license": "Public domain"
+    },
+    "us-mi": {
+      "name": "Michigan",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Michigan.svg",
+      "license": "Public domain"
+    },
+    "us-mn": {
+      "name": "Minnesota",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Minnesota.svg",
+      "license": "Public domain"
+    },
+    "us-mo": {
+      "name": "Missouri",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Missouri.svg",
+      "license": "Public domain"
+    },
+    "us-mt": {
+      "name": "Montana",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Montana.svg",
+      "license": "Public domain"
+    },
+    "us-ne": {
+      "name": "Nebraska",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Nebraska.svg",
+      "license": "Public domain"
+    },
+    "us-nv": {
+      "name": "Nevada",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Nevada.svg",
+      "license": "Public domain"
+    },
+    "us-nh": {
+      "name": "New Hampshire",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_New_Hampshire.svg",
+      "license": "Public domain"
+    },
+    "us-nj": {
+      "name": "New Jersey",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_New_Jersey.svg",
+      "license": "Public domain"
+    },
+    "us-nm": {
+      "name": "New Mexico",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_New_Mexico.svg",
+      "license": "Public domain"
+    },
+    "us-ny": {
+      "name": "New York",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_New_York.svg",
+      "license": "Public domain"
+    },
+    "us-nc": {
+      "name": "North Carolina",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_North_Carolina.svg",
+      "license": "Public domain"
+    },
+    "us-nd": {
+      "name": "North Dakota",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_North_Dakota.svg",
+      "license": "Public domain"
+    },
+    "us-oh": {
+      "name": "Ohio",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Ohio.svg",
+      "license": "Public domain"
+    },
+    "us-ok": {
+      "name": "Oklahoma",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Oklahoma.svg",
+      "license": "Public domain"
+    },
+    "us-or": {
+      "name": "Oregon",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Oregon.svg",
+      "license": "Public domain"
+    },
+    "us-pa": {
+      "name": "Pennsylvania",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Pennsylvania.svg",
+      "license": "Public domain"
+    },
+    "us-ri": {
+      "name": "Rhode Island",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Rhode_Island.svg",
+      "license": "Public domain"
+    },
+    "us-sc": {
+      "name": "South Carolina",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_South_Carolina.svg",
+      "license": "Public domain"
+    },
+    "us-sd": {
+      "name": "South Dakota",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_South_Dakota.svg",
+      "license": "Public domain"
+    },
+    "us-tn": {
+      "name": "Tennessee",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Tennessee.svg",
+      "license": "Public domain"
+    },
+    "us-tx": {
+      "name": "Texas",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Texas.svg",
+      "license": "Public domain"
+    },
+    "us-ut": {
+      "name": "Utah",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Utah.svg",
+      "license": "Public domain"
+    },
+    "us-vt": {
+      "name": "Vermont",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Vermont.svg",
+      "license": "Public domain"
+    },
+    "us-va": {
+      "name": "Virginia",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Virginia.svg",
+      "license": "Public domain"
+    },
+    "us-wa": {
+      "name": "Washington",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Washington.svg",
+      "license": "Public domain"
+    },
+    "us-wv": {
+      "name": "West Virginia",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_West_Virginia.svg",
+      "license": "Public domain"
+    },
+    "us-wi": {
+      "name": "Wisconsin",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Wisconsin.svg",
+      "license": "Public domain"
+    },
+    "us-wy": {
+      "name": "Wyoming",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Wyoming.svg",
+      "license": "Public domain"
+    },
+    "us-dc": {
+      "name": "District of Columbia",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_the_District_of_Columbia.svg",
+      "license": "Public domain"
+    }
+  }
+}

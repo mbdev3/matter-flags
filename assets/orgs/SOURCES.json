@@ -1,0 +1,30 @@
+{
+  "note": "Supranational/organization flags. All verified Public Domain via Wikimedia Commons API (LicenseShortName). Raw files unmodified; build normalizes to 32x24. Country SVGs: Yummygum flagpack-core (MIT), vendored under assets/countries/.",
+  "flags": {
+    "eu": {
+      "name": "European Union",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Europe.svg",
+      "license": "Public domain"
+    },
+    "un": {
+      "name": "United Nations",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_the_United_Nations.svg",
+      "license": "Public domain"
+    },
+    "nato": {
+      "name": "NATO",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_NATO.svg",
+      "license": "Public domain"
+    },
+    "african-union": {
+      "name": "African Union",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_the_African_Union.svg",
+      "license": "Public domain"
+    },
+    "arab-league": {
+      "name": "Arab League",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Arab_League.svg",
+      "license": "Public domain"
+    }
+  }
+}

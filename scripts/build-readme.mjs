@@ -1,4 +1,4 @@
-// Regenerates README.md from README.template.md + live code tables.
+// Regenerates README.md from scripts/manual.template.md + live code tables.
 // Run: node scripts/build-readme.mjs
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
@@ -21,7 +21,7 @@ const countries = entries.filter((e) => !e.code.startsWith('us-') && !ORGS.has(e
 const orgs = entries.filter((e) => ORGS.has(e.code)).sort(byCode);
 const states = entries.filter((e) => e.code.startsWith('us-')).sort(byCode);
 
-let tpl = readFileSync(join(root, 'README.template.md'), 'utf8');
+let tpl = readFileSync(join(root, 'scripts', 'manual.template.md'), 'utf8');
 tpl = tpl
   .replace('<!-- CODES-COUNTRIES -->', countries.map(line).join('\n'))
   .replace('<!-- CODES-ORGS -->', orgs.map(line).join('\n'))

@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { FlagFrame, FALLBACK_SVG_INNER, toSize, shapeRadius, DEFAULT_BORDER_COLOR } from './internals.js';
+import { FlagFrame, PLACEHOLDER_SVG_INNER, toSize, shapeRadius, DEFAULT_BORDER_COLOR } from './internals.js';
 import { FLAG_LOADERS } from './loaders.js';
 import { normalizeCode, countryName } from './countries.js';
 import type { FlagVisualProps } from './types.js';
@@ -82,7 +82,6 @@ export function DuoFlag({
           boxSizing: 'border-box',
           border: bordered ? `${typeof borderWidth === 'number' ? `${borderWidth}px` : borderWidth} solid ${borderColor}` : undefined,
           boxShadow: dropShadow ? '0 1px 3px rgba(0,0,0,0.35)' : undefined,
-          backgroundColor: '#f1f5f9',
           lineHeight: 0,
           ...style,
         }}
@@ -122,7 +121,6 @@ export function DuoFlag({
         boxSizing: 'border-box',
         border: bordered ? `${typeof borderWidth === 'number' ? `${borderWidth}px` : borderWidth} solid ${borderColor}` : undefined,
         boxShadow: dropShadow ? '0 1px 3px rgba(0,0,0,0.35)' : undefined,
-        backgroundColor: '#f1f5f9',
         lineHeight: 0,
         ...style,
       }}
@@ -162,7 +160,7 @@ function SplitHalf({
     };
   }, [key]);
 
-  if (!Comp) return <FlagFrame label={countryName(key)} svgInner={FALLBACK_SVG_INNER} {...visual} />;
+  if (!Comp) return <FlagFrame label={countryName(key)} svgInner={PLACEHOLDER_SVG_INNER} {...visual} />;
 
   if (side === 'full') return <Comp {...visual} />;
 

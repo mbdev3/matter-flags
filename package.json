@@ -1,6 +1,6 @@
 {
   "name": "matter-flags",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Tree-shakeable, zero-dependency React flag components. One flag = ~1kB.",
   "type": "module",
   "sideEffects": false,
@@ -46,7 +46,7 @@
   },
   "scripts": {
     "build:flags": "node scripts/build-flags.mjs && node scripts/build-readme.mjs",
-    "build": "pnpm build:flags && tsup",
+    "build": "pnpm build:flags && tsup && node scripts/add-use-client.mjs",
     "dev": "tsup --watch",
     "typecheck": "tsc --noEmit",
     "size": "node scripts/check-size.mjs",

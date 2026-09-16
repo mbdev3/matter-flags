@@ -3,6 +3,16 @@ import type { FlagVisualProps } from './types.js';
 
 export const DEFAULT_BORDER_COLOR = 'rgba(0,0,0,0.15)';
 
+/** Loading-placeholder fill. */
+export const PLACEHOLDER_FILL = '#f1f5f9';
+
+/**
+ * Skeleton shown while a flag chunk loads. Painted inside the SVG rather than
+ * as a CSS background so it shares the flag's raster pass — no clip seam at any
+ * border radius. See the halo note in FlagFrame below.
+ */
+export const PLACEHOLDER_SVG_INNER = `<rect width="32" height="24" fill="${PLACEHOLDER_FILL}"/>`;
+
 /** Plain white flag. Rendered whenever the code is unknown/invalid. */
 export const FALLBACK_SVG_INNER = '<rect width="32" height="24" fill="white"/>';
 export const FALLBACK_LABEL = 'Unknown flag';
@@ -90,7 +100,12 @@ export function FlagFrame({
         boxSizing: 'border-box',
         border: bordered ? `${bw} solid ${borderColor}` : undefined,
         boxShadow: dropShadow ? '0 1px 3px rgba(0,0,0,0.35)' : undefined,
-        backgroundColor: '#f1f5f9',
+        // No backgroundColor here on purpose: this span carries borderRadius +
+        // overflow:hidden, and the browser paints the background before clipping
+        // the SVG with a separate antialiased mask. The two edges don't line up,
+        // so any fill bleeds through the semi-transparent rim pixels as a halo
+        // (worst on shape="circle"). Anything that needs a fill paints it inside
+        // the SVG instead — see PLACEHOLDER_SVG_INNER.
         lineHeight: 0,
         ...style,
       }}

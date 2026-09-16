@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { FlagFrame, FALLBACK_SVG_INNER } from './internals.js';
+import { FlagFrame, FALLBACK_SVG_INNER, PLACEHOLDER_SVG_INNER } from './internals.js';
 import { FLAG_LOADERS } from './loaders.js';
 import { normalizeCode, countryName } from './countries.js';
 import type { FlagVisualProps } from './types.js';
@@ -48,7 +48,7 @@ export function Flag({ code, fallback, ...visual }: FlagProps): React.JSX.Elemen
   }
   if (!Comp) {
     if (fallback !== undefined) return <>{fallback}</>;
-    return <FlagFrame label={label} svgInner={FALLBACK_SVG_INNER} {...visual} />;
+    return <FlagFrame label={label} svgInner={PLACEHOLDER_SVG_INNER} {...visual} />;
   }
   return <Comp {...visual} title={visual.title ?? label} />;
 }

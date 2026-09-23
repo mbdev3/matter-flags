@@ -2,6 +2,12 @@ import { createFlagComponent } from '../createFlag.js';
 
 const __inner = "<g transform=\"translate(0 1.333) scale(0.889)\"><defs><path id=\"a\" d=\"M0 215a32 32 0 0 0 32-32v-16h31a32 32 0 0 0 0-64H32V32h199v31a32 32 0 0 0 64 0V32h28a32 32 0 0 0 32-32H0z\" transform=\"scale(.024)\"/></defs><path d=\"M0 0h36v24H0z\"/><path fill=\"#eaaa00\" d=\"M0 24V2l3 2v20h3V0h3v24h3V0h3v24h3V0h3v24h3V0h3v24h3V0h3v24h3v-2L3 0v4l30 20z\"/><g id=\"b\"><path fill=\"#fff\" d=\"M18 0h9v12h9V6H18z\"/><path fill=\"#9d2235\" d=\"M27 0h9v6H18v6h9z\"/><g transform=\"translate(27 6)\"><use xlink:href=\"#a\" fill=\"#9d2235\"/><use xlink:href=\"#a\" fill=\"#fff\" transform=\"scale(-1 1)\"/><use xlink:href=\"#a\" fill=\"#fff\" transform=\"scale(1 -1)\"/><use xlink:href=\"#a\" fill=\"#9d2235\" transform=\"scale(-1)\"/></g></g><use xlink:href=\"#b\" x=\"-18\" y=\"12\"/></g>";
 
-const C = createFlagComponent('us-md', 'Maryland', __inner);
+/** Standalone 32x24 SVG document. For react-native-svg, data URIs, <img src>. */
+export const svg: string = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 24">${__inner}</svg>`;
+
+/** Country / region name. */
+export const name = 'Maryland';
+
+const C = /* @__PURE__ */ createFlagComponent('us-md', 'Maryland', __inner);
 
 export default C;

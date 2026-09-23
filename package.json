@@ -1,6 +1,6 @@
 {
   "name": "matter-flags",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Tree-shakeable, zero-dependency React flag components. One flag = ~1kB.",
   "type": "module",
   "sideEffects": false,

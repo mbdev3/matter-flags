@@ -2,6 +2,12 @@ import { createFlagComponent } from '../createFlag.js';
 
 const __inner = "<g clip-path=\"url(#a)\"><path fill=\"#fff\" d=\"M0 0h32v24H0z\"/><path fill=\"#f7fcff\" fill-rule=\"evenodd\" d=\"M0 0v24h32V0z\" clip-rule=\"evenodd\"/><mask id=\"b\" width=\"32\" height=\"24\" x=\"0\" y=\"0\" maskUnits=\"userSpaceOnUse\" style=\"mask-type:luminance\"><path fill=\"#fff\" fill-rule=\"evenodd\" d=\"M0 0v24h32V0z\" clip-rule=\"evenodd\"/></mask><g mask=\"url(#b)\"><path fill=\"#0080ec\" fill-rule=\"evenodd\" d=\"M0 0v8h32V0zm0 16v8h32v-8z\" clip-rule=\"evenodd\"/><path fill=\"#d0ab00\" fill-rule=\"evenodd\" d=\"M16 8q.28 0 .56.04l-.2 1.27a3 3 0 0 0-.88.03l-.09-1.3Q15.7 8 16 8m1.15.17L16.8 9.4a2.7 2.7 0 0 1 1.9 2.68l1.3.1V12a4 4 0 0 0-2.85-3.83m2.36 5.74A4 4 0 0 1 16.3 16v-1.3a2.7 2.7 0 0 0 1.83-1.01zm-6.93.16a4 4 0 0 0 3.2 1.92V14.7a2.7 2.7 0 0 1-1.94-1.07zm-.58-1.9V12a4 4 0 0 1 2.55-3.73l.34 1.26a2.7 2.7 0 0 0-1.6 2.45z\" clip-rule=\"evenodd\"/><path fill=\"#7cdfff\" fill-rule=\"evenodd\" d=\"m15.97 8.95-2.73 4.73h5.51z\" clip-rule=\"evenodd\"/><mask id=\"c\" width=\"6\" height=\"6\" x=\"13\" y=\"8\" maskUnits=\"userSpaceOnUse\" style=\"mask-type:luminance\"><path fill=\"#fff\" fill-rule=\"evenodd\" d=\"m15.97 8.95-2.73 4.73h5.51z\" clip-rule=\"evenodd\"/></mask><g mask=\"url(#c)\"><path stroke=\"#e31d1c\" d=\"M16 15.12a2.4 2.4 0 1 0 0-4.78 2.4 2.4 0 0 0 0 4.78Z\"/><path stroke=\"#ffd018\" d=\"M16 15.12a2.4 2.4 0 1 0 0-4.78 2.4 2.4 0 0 0 0 4.78Z\"/><path stroke=\"#4edd00\" d=\"M16 15.12a2.4 2.4 0 1 0 0-4.78 2.4 2.4 0 0 0 0 4.78Z\"/><path stroke=\"#3d58db\" d=\"M16 15.12a2.4 2.4 0 1 0 0-4.78 2.4 2.4 0 0 0 0 4.78Z\"/><path fill=\"#3d58db\" d=\"M13.02 12.22h6.25v1.82h-6.25z\"/><path fill=\"#97c923\" fill-rule=\"evenodd\" d=\"m13.44 13 1.24-1.25.39.62.26-.75.3.56.31-.43.4.43.38-.56.31.56.36-.43.85.9.15.34-4.95.25z\" clip-rule=\"evenodd\"/></g></g></g><defs><clipPath id=\"a\"><path fill=\"#fff\" d=\"M0 0h32v24H0z\"/></clipPath></defs>";
 
-const C = createFlagComponent('ni', 'Nicaragua', __inner);
+/** Standalone 32x24 SVG document. For react-native-svg, data URIs, <img src>. */
+export const svg: string = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 24">${__inner}</svg>`;
+
+/** Country / region name. */
+export const name = 'Nicaragua';
+
+const C = /* @__PURE__ */ createFlagComponent('ni', 'Nicaragua', __inner);
 
 export default C;

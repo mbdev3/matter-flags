@@ -47,7 +47,38 @@ function svgoOptimize(raw, path, fp = 2) {
 
 function writeFlagModule(code, upper, label, inner) {
   codes.push({ code, upper, ident: ident(upper), label });
-  const out = `import { createFlagComponent } from '../createFlag.js';\n\nconst __inner = ${JSON.stringify(inner)};\n\nconst C = createFlagComponent('${code}', '${label}', __inner);\n\nexport default C;\n`;
+  // `svg` is a template literal over __inner, so the markup is stored once, not
+  // twice. Under sideEffects:false an app that imports only `svg` (React Native)
+  // drops the component and never pulls in React.
+  const out = [
+    `import { createFlagComponent } from '../createFlag.js';`,
+    ``,
+    `const __inner = ${JSON.stringify(inner)};`,
+    ``,
+    `/** Standalone 32x24 SVG document. For react-native-svg, data URIs, <img src>. */`,
+    // The `: string` annotation is load-bearing. Without it TS infers a string
+    // LITERAL type and inlines the whole flag into the .d.ts — that alone took
+    // the declarations from ~60kB to 2.7MB and doubled the tarball.
+    //
+    // xmlns:xlink is only emitted for the ~21 flags that use <use xlink:href>.
+    // Inside a live <svg> the browser's HTML parser tolerates the undeclared
+    // prefix; a standalone document is parsed as XML and a real renderer
+    // (resvg, react-native-svg) rejects it outright.
+    'export const svg: string = `<svg xmlns="http://www.w3.org/2000/svg"' +
+      (inner.includes('xlink:') ? ' xmlns:xlink="http://www.w3.org/1999/xlink"' : '') +
+      ' viewBox="0 0 32 24">${__inner}</svg>`;',
+    ``,
+    `/** Country / region name. */`,
+    `export const name = '${label}';`,
+    ``,
+    // /* @__PURE__ */ lets bundlers drop the component when only `svg`/`name`
+    // are imported. Without it the call is assumed side-effectful, the module
+    // keeps its createFlagComponent import, and React lands in the RN bundle.
+    `const C = /* @__PURE__ */ createFlagComponent('${code}', '${label}', __inner);`,
+    ``,
+    `export default C;`,
+    ``,
+  ].join('\n');
   writeFileSync(join(OUT_DIR, `${code}.ts`), out);
 }
 
@@ -172,7 +203,7 @@ const ALIASES = { gb: 'gb-ukm', uk: 'gb-ukm', arab: 'arab-league', africa: 'afri
 for (const [alias, target] of Object.entries(ALIASES)) {
   writeFileSync(
     join(OUT_DIR, `${alias}.ts`),
-    `export { default } from './${target}.js';\n`,
+    `export { default, svg, name } from './${target}.js';\n`,
   );
 }
 

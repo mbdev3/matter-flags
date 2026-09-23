@@ -1,1 +1,1 @@
-export { default } from './gb-ukm.js';
+export { default, svg, name } from './gb-ukm.js';

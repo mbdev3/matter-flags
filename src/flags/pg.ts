@@ -2,6 +2,12 @@ import { createFlagComponent } from '../createFlag.js';
 
 const __inner = "<g clip-path=\"url(#a)\"><path fill=\"#fff\" d=\"M0 0h32v24H0z\"/><rect width=\"32\" height=\"24\" fill=\"#e11c1b\" rx=\"2\"/><path fill=\"#1d1d1d\" fill-rule=\"evenodd\" d=\"m0 0 32 24H0z\" clip-rule=\"evenodd\"/><path fill=\"#eeeef6\" fill-rule=\"evenodd\" d=\"M7.08 18.27h1.34l.63-1.5.74 1.49 1.37.07-1.17 1.27.6 1.53-1.48-.85-1.37.86.52-1.49zm-4-4h1.34l.63-1.5.74 1.49 1.37.07-1.17 1.27.6 1.53-1.48-.85-1.37.86.52-1.49zm4-2h1.34l.63-1.5.74 1.49 1.37.07-1.17 1.27.6 1.53-1.48-.85-1.37.86.52-1.49z\" clip-rule=\"evenodd\"/><path fill=\"#eeeef6\" fill-rule=\"evenodd\" d=\"m9.71 16.56.92-.03.33-.94.37.94.84.08-.76.54.61.95-1.06-.4-.92.4.49-.93zm2-2 .92-.03.33-.94.37.94.84.08-.76.54.61.95-1.06-.4-.92.4.49-.93z\" clip-rule=\"evenodd\"/><path fill=\"#fbcd17\" fill-rule=\"evenodd\" d=\"M21.08 2s-3.08.62-2.22 4.91h-.44s.04-.22-.39-.36c-.42-.13-.34-.08-.55 0s-1.55 0-1.55 0v.17l.94.4s-.02.34.37.53c.4.19.68.28.68.28s.06.37-.31.37-1.85-.48-2.38.7S14 11.05 14 11.05h.8l-.22.26h.89l-.24.14s1.1-.01 1.19-.14c.08-.12 0 .34 0 .34s1.06-.49 1.12-.6l.5.34.14-.58.54.24.14-.55s1.51 2.53 2.66 2.38v-.42l1.05.42.13-.18s1.26.51 1.65.56l-.27-.56h.27l-.27-1.05h.27l-.55-.84.15-.22-.1-.3s2.04.65 1.94 1.68c-.09 1.03-1 1.45-1 1.45s-.86.26-1.65.2c0 0 .63.74 1.94.5 1.32-.26 1.76-1.53 1.76-1.53s.6 1.25.1 1.91-2.7 1.13-2.7 1.13.8.47 1.55.35c.77-.13 1.95-.79 2.18-1.87s-.8-3.07-1.26-3.3l-.18-.69.42.17-.86-2.08.42.09-1.2-1.5.32-.1-1.66-1.2.5-.14s-1.24-.62-2.64.14l.01-.27-.37.07.03-.29.36-.56-.55-.2s.45-.68.38-.67c0 0-.5.14-.47.08 0 0 .25-.64.19-.62 0 0-.58.2-.5.1l.23-.4z\" clip-rule=\"evenodd\"/></g><defs><clipPath id=\"a\"><path fill=\"#fff\" d=\"M0 0h32v24H0z\"/></clipPath></defs>";
 
-const C = createFlagComponent('pg', 'Papua New Guinea', __inner);
+/** Standalone 32x24 SVG document. For react-native-svg, data URIs, <img src>. */
+export const svg: string = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 24">${__inner}</svg>`;
+
+/** Country / region name. */
+export const name = 'Papua New Guinea';
+
+const C = /* @__PURE__ */ createFlagComponent('pg', 'Papua New Guinea', __inner);
 
 export default C;

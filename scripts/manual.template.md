@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![React 18 | 19](https://img.shields.io/badge/React-18%20%7C%2019-61dafb.svg)](https://react.dev/)
 
-Tree-shakeable, zero-dependency React flag components. **307 flags** — 252 countries, 5 organizations, 50 US states + DC. One flag ≈ 2kB gzip. No postinstall, no `public/` copying, no CSS import.
+Tree-shakeable, zero-dependency React flag components. **307 flags** — 252 countries, 5 organizations, 50 US states + DC. One flag ≈ 2kB gzip. No postinstall, no `public/` copying, no CSS import. Works on the web and in **React Native / Expo**.
 
 - Docs & playground: <https://flags.matterdevelopment.com/>
 - npm: <https://www.npmjs.com/package/matter-flags>
@@ -18,6 +18,7 @@ Tree-shakeable, zero-dependency React flag components. **307 flags** — 252 cou
 - Borders, drop shadows, and gloss gradients via inline styles — zero CSS files
 - White `<FallbackFlag />` for unknown codes (never crashes), `role="img"` + labels built in
 - Case-insensitive codes with sensible aliases (`uk` → Union Jack, `arab`, `africa`)
+- Every flag also exports its raw `svg` string — React Native / Expo, data URIs, `<img src>`
 
 ## Install
 
@@ -94,6 +95,15 @@ import USTX from 'matter-flags/flags/us-tx';
 import { MA, US, GB } from 'matter-flags/flags';
 ```
 
+Each module also exports the flag's raw artwork and name, so you can use it without React DOM at all (see [React Native / Expo](#react-native--expo)):
+
+```ts
+import MA, { svg, name } from 'matter-flags/flags/ma';
+
+svg;  // '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 24">…</svg>'
+name; // 'Morocco'
+```
+
 Same visual props as `<Flag />` minus `code`/`fallback`:
 
 ```tsx
@@ -161,10 +171,53 @@ US states + DC: `us-al` … `us-wy`, `us-dc` (e.g. `us-tx`, `us-ca`, `us-oh`). N
 
 </details>
 
+## React Native / Expo
+
+The React components render HTML, so they don't run on native — but every flag module also exports its artwork as a plain `svg` string. Pair it with [`react-native-svg`](https://github.com/software-mansion/react-native-svg) (`npx expo install react-native-svg`) and there is nothing else to add:
+
+```tsx
+import { SvgXml } from 'react-native-svg';
+import { svg, name } from 'matter-flags/flags/ma';
+
+<SvgXml xml={svg} width={32} height={24} accessibilityLabel={name} />;
+```
+
+`svg` is a complete, standalone `<svg viewBox="0 0 32 24">` document — no wrapper needed, and it carries `xmlns:xlink` on the flags that require it. It has no intrinsic `width`/`height`, so you size it entirely with props.
+
+Importing only `svg`/`name` leaves the React component behind. Bundled with esbuild, one flag is **~0.8kB with no `react` import at all**, against ~4.8kB when you import the component. Any bundler that honours `sideEffects: false` (Vite/Rollup, webpack, esbuild) does this automatically; Metro's tree-shaking is still experimental, so a default Expo build may also carry the unused component wrapper — a few hundred bytes, and nothing that renders.
+
+A reusable native component is a few lines:
+
+```tsx
+// Flag.native.tsx
+import { SvgXml } from 'react-native-svg';
+
+export function Flag({ svg, name, size = 24, radius = 4 }) {
+  return (
+    <SvgXml
+      xml={svg}
+      width={size}
+      height={size * 0.75}
+      accessibilityLabel={name}
+      style={{ borderRadius: radius, overflow: 'hidden' }}
+    />
+  );
+}
+```
+
+The same `svg` string also works anywhere a standalone SVG does — a data URI, an `<img src>`, or a server-side rasteriser:
+
+```ts
+import { svg } from 'matter-flags/flags/fr';
+
+const href = `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
+```
+
 ## Next.js / SSR
 
-- Direct imports (`matter-flags/flags/xx`) are pure server components — use freely in RSC, SSR, SSG.
-- `<Flag />`, `<DuoFlag />`, `<FallbackFlag />` are client components only because they load chunks with `useEffect`. On the server they render a correct-size placeholder, so there is no hydration mismatch or layout shift. Wrap interactive usage in a client component boundary as usual.
+- Every module ships with `'use client'`. `FlagFrame` calls `React.useId()`, which React's `react-server` build does not provide, so a flag cannot render inside a Server Component itself — importing one from an RSC is fine and simply opens a client boundary.
+- `<Flag />`, `<DuoFlag />`, `<FallbackFlag />` load chunks with `useEffect`. On the server they render a correct-size placeholder, so there is no hydration mismatch or layout shift.
+- Direct imports (`matter-flags/flags/xx`) stay the cheapest option for lists and tables: no loader map, no `useEffect`, and the markup is in the SSR output.
 
 ## Size & tree-shaking
 
@@ -174,6 +227,7 @@ US states + DC: `us-al` … `us-wy`, `us-dc` (e.g. `us-tx`, `us-ca`, `us-oh`). N
 |---|---|
 | `import MA from 'matter-flags/flags/ma'` | ~0.5kB gzip flag + ~1.4kB shared runtime (once) |
 | `<Flag code="ma">` | same, code-split per flag |
+| `import { svg } from 'matter-flags/flags/ma'` | artwork only — no React, no shared runtime |
 | Core (`matter-flags`) | ~6kB gzip, zero flags bundled |
 
 Seal-heavy flags (some US states, up to ~50kB gzip) cost what their artwork costs — you only pay for flags you import. `pnpm size` enforces the budget in CI.

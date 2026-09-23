@@ -2,6 +2,12 @@ import { createFlagComponent } from '../createFlag.js';
 
 const __inner = "<g clip-path=\"url(#a)\"><path fill=\"#fff\" d=\"M0 0h32v24H0z\"/><rect width=\"32\" height=\"24\" fill=\"#5eaa22\" rx=\"2\"/><mask id=\"b\" width=\"48\" height=\"30\" x=\"-8\" y=\"-3\" fill=\"#000\" maskUnits=\"userSpaceOnUse\"><path fill=\"#fff\" d=\"M-8-3h48v30H-8z\"/><path fill-rule=\"evenodd\" d=\"M16 12 32 0H0zm0 0L0 24h32z\" clip-rule=\"evenodd\"/></mask><path fill=\"#dd2c2b\" fill-rule=\"evenodd\" d=\"M16 12 32 0H0zm0 0L0 24h32z\" clip-rule=\"evenodd\"/><path fill=\"#fff\" d=\"m32 0 1.5 2 6-4.5H32zM0 0v-2.5h-7.5l6 4.5zm0 24-1.5-2-6 4.5H0zm32 0v2.5h7.5l-6-4.5zM30.5-2l-16 12 3 4 16-12zM0 2.5h32v-5H0zM17.5 10 1.5-2l-3 4 16 12zm-3 0-16 12 3 4 16-12zM0 26.5h32v-5H0zM33.5 22l-16-12-3 4 16 12z\" mask=\"url(#b)\"/><path fill=\"#fff\" fill-rule=\"evenodd\" d=\"M16 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12\" clip-rule=\"evenodd\"/><path fill=\"#dd2c2b\" fill-rule=\"evenodd\" stroke=\"#5eaa22\" stroke-width=\".25\" d=\"m15.43 10.39-1.16.01.59-1-.6-1 1.17.01L16 7.4l.57 1.01 1.16-.01-.59 1 .6 1-1.17-.01L16 11.4zm-2.5 4.1-1.16.01.59-1-.6-1 1.17.01.57-1.01.57 1.01 1.16-.01-.59 1 .6 1-1.17-.01-.57 1.01zm5 0-1.16.01.59-1-.6-1 1.17.01.57-1.01.57 1.01 1.16-.01-.59 1 .6 1-1.17-.01-.57 1.01z\" clip-rule=\"evenodd\"/></g><defs><clipPath id=\"a\"><path fill=\"#fff\" d=\"M0 0h32v24H0z\"/></clipPath></defs>";
 
-const C = createFlagComponent('bi', 'Burundi', __inner);
+/** Standalone 32x24 SVG document. For react-native-svg, data URIs, <img src>. */
+export const svg: string = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 24">${__inner}</svg>`;
+
+/** Country / region name. */
+export const name = 'Burundi';
+
+const C = /* @__PURE__ */ createFlagComponent('bi', 'Burundi', __inner);
 
 export default C;

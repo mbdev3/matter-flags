@@ -1,1 +1,1 @@
-export { default } from './arab-league.js';
+export { default, svg, name } from './arab-league.js';

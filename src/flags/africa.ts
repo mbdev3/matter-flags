@@ -1,1 +1,1 @@
-export { default } from './african-union.js';
+export { default, svg, name } from './african-union.js';
